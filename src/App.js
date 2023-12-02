@@ -41,7 +41,7 @@ function App() {
           }}>
             Donate</button>
       </Tab.List>
-      <Tab.Panels className={'bg-slate-400 h-screen'}>
+      <Tab.Panels className={'bg-slate-400'}>
         <Tab.Panel> <AboutPanel/></Tab.Panel>
         <Tab.Panel><ProgramsPanel/></Tab.Panel>
         <Tab.Panel><PublicationsPanel/></Tab.Panel>

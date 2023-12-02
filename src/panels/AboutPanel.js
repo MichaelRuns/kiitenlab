@@ -4,7 +4,7 @@ const doctors = [
   {
     first_name: "Karen",
     last_name: "Vernau",
-    picture: null,
+    picture: `${process.env.PUBLIC_URL}/karen_vernau_bean.jpeg`,
     bio: "lorem ipsum haha xd"
     },
     {
@@ -37,15 +37,17 @@ function AboutPanel() {
             </div>
             {doctors.map((doctor) =>{
               return (
-                <div className='bg-slate-200 grid grid-rows-3 grid-cols-1 w-2/3'>
-                  <div className='font-bold'>
+                <div className='bg-slate-200 flex flex-col w-2/3 h-full'>
+                  <div className='font-bold h-full flex border-b border-black'>
                     {doctor.first_name + " " + doctor.last_name}
                   </div>
-                  <div>
-                    {doctor.picture? <img src={`{}`}/>: <CameraIcon className='w-5'/>}
-                  </div>
-                  <div>
-                    {doctor.bio}
+                  <div className='flex flex-row'> 
+                    <div className='h-fit overflow-hidden flex items-center border-r border-black'>
+                      <img className='h-full' src={doctor.picture} alt='profile picture' width={300} height={300}/>
+                    </div>
+                    <div className='h-full flex p-2'>
+                      <div>{doctor.bio}</div>
+                    </div>
                   </div>
                 </div>
               );
