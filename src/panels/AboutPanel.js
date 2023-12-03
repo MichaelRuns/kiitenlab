@@ -43,7 +43,7 @@ function AboutPanel() {
                   </div>
                   <div className='flex flex-row'> 
                     <div className='h-fit overflow-hidden flex items-center border-r border-black'>
-                      <img className='h-full' src={doctor.picture} alt='profile picture' width={300} height={300}/>
+                      <img className='h-full' src={doctor.picture} alt='profile' width={300} height={300}/>
                     </div>
                     <div className='h-full flex p-2'>
                       <div>{doctor.bio}</div>
